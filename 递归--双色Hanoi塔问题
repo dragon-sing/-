@@ -1,0 +1,16 @@
+#include<iostream>
+using namespace std;
+void dchanoi(int n,char a,char b,char c)
+{	if(n==0)
+	return ;
+	dchanoi(n-1,a,c,b);
+	cout<<n<<a<<b<<endl;
+	dchanoi(n-1,c,b,a);
+}
+int main()
+{	int n;
+	cout<<"输入n"<<endl;
+	cin>>n;
+	cout<<"从a移到b"<<endl;
+	dchanoi(n,'a','b','c');
+}
