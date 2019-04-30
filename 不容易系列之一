@@ -1,0 +1,29 @@
+#include<iostream>
+using namespace std;
+int fun(int n)
+{	if (n==1)
+	return 0;
+	else if (n==2)
+	return 1;
+	else 
+	return (n-1)*((fun(n-1)+fun(n-2)));
+}
+int main()
+{
+	int C;
+	cout<<"请输入需要的数据总量"<<endl;
+	cin>>C;
+	
+	for(int i=0;i<C;i++)
+	{
+		int n;
+		cout<<"请输入8006的网友的人数n,还剩"<<C-i<<"次输入"<<endl;
+		while(cin>>n,n>20)
+		{
+			cout<<"请重新输入n"<<endl;
+		}
+		cout<<fun(n)<<endl;
+			
+	} 	
+} 
+
